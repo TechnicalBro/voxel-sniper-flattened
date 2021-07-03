@@ -1,7 +1,7 @@
 package com.thevoxelbox.voxelsniper.wrapper;
 
+import com.fastasyncworldedit.core.util.TaskManager;
 import com.thevoxelbox.voxelsniper.wrapper.AsyncSign;
-import com.boydti.fawe.util.TaskManager;
 import com.destroystokyo.paper.block.BlockSoundGroup;
 import com.sk89q.worldedit.WorldEditException;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
@@ -20,12 +20,15 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.block.PistonMoveReaction;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.MetadataValue;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.util.BoundingBox;
 import org.bukkit.util.RayTraceResult;
 import org.bukkit.util.Vector;
+import org.bukkit.util.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import java.util.Collection;
@@ -392,6 +395,16 @@ public class AsyncBlock implements Block {
 	}
 
 	@Override
+	public boolean isPreferredTool(@NotNull ItemStack itemStack) {
+		return false;
+	}
+
+	@Override
+	public float getBreakSpeed(@NotNull Player player) {
+		return 0;
+	}
+
+	@Override
 	public void setMetadata(@Nonnull String metadataKey, @Nonnull MetadataValue newMetadataValue) {
 		this.getUnsafeBlock().setMetadata(metadataKey, newMetadataValue);
 	}
@@ -447,6 +460,11 @@ public class AsyncBlock implements Block {
 	@Override
 	public BoundingBox getBoundingBox() {
 		return this.getUnsafeBlock().getBoundingBox();
+	}
+
+	@Override
+	public @NotNull VoxelShape getCollisionShape() {
+		return null;
 	}
 
 	@Override

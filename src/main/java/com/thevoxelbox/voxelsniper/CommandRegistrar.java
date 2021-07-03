@@ -240,8 +240,9 @@ public class CommandRegistrar {
 			.description("Undoes the last snipe.")
 			.permission("voxelsniper.sniper")
 			.alias("u")
-			.usage("/u")
-			.usage("Example: /u -- Undoes your most recent snipe.")
+			.alias("uu")
+			.usage("/(u/uu)")
+			.usage("Example: /(u/uu) [x] -- Undoes your most recent snipe. [x] = Amount of actions.")
 			.sender(Player.class)
 			.build();
 		UndoExecutor executor = new UndoExecutor(this.plugin);

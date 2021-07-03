@@ -1,6 +1,6 @@
 package com.thevoxelbox.voxelsniper.wrapper;
 
-import com.boydti.fawe.FaweCache;
+import com.fastasyncworldedit.core.FaweCache;
 import com.sk89q.jnbt.CompoundTag;
 import com.sk89q.jnbt.Tag;
 import org.apache.commons.lang.Validate;

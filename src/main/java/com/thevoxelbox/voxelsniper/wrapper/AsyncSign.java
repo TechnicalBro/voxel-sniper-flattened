@@ -101,6 +101,16 @@ public class AsyncSign extends AsyncBlockState implements Sign {
 	}
 
 	@Override
+	public boolean isGlowingText() {
+		return false;
+	}
+
+	@Override
+	public void setGlowingText(boolean bl) {
+
+	}
+
+	@Override
 	@NotNull
 	public PersistentDataContainer getPersistentDataContainer() {
 		return new AsyncDataContainer(this::getNbtData, this::setNbtData);

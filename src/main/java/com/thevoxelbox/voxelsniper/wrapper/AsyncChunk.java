@@ -1,8 +1,8 @@
 package com.thevoxelbox.voxelsniper.wrapper;
 
-import com.boydti.fawe.Fawe;
-import com.boydti.fawe.util.MathMan;
-import com.boydti.fawe.util.TaskManager;
+import com.fastasyncworldedit.core.Fawe;
+import com.fastasyncworldedit.core.util.MathMan;
+import com.fastasyncworldedit.core.util.TaskManager;
 import org.bukkit.Chunk;
 import org.bukkit.ChunkSnapshot;
 import org.bukkit.World;

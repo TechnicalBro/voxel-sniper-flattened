@@ -21,16 +21,17 @@ repositories {
 }
 
 dependencies {
-	compileOnlyApi("com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT")
+	compileOnlyApi(fileTree("src/main/lib") { include("*.jar") })
 	compileOnly("org.jetbrains:annotations:20.1.0")
-	compileOnlyApi("com.intellectualsites.fawe:FAWE-Bukkit:1.16-637")
+	compileOnlyApi("com.fastasyncworldedit:FAWE-Bukkit:1.17-23")
+	compileOnlyApi("com.fastasyncworldedit:FAWE-Core:1.17-23")
 	implementation("org.incendo.serverlib:ServerLib:2.2.0")
 	implementation("org.bstats:bstats-bukkit:2.2.1")
 	implementation("org.bstats:bstats-base:2.2.1")
 }
 
 group = "com.thevoxelbox"
-version = "1.0.4-backward"
+version = "1.0.5-backward"
 
 bukkit {
 	name = "VoxelSniper"

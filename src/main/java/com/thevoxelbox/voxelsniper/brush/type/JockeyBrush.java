@@ -1,6 +1,6 @@
 package com.thevoxelbox.voxelsniper.brush.type;
 
-import com.boydti.fawe.Fawe;
+import com.fastasyncworldedit.core.Fawe;
 import com.thevoxelbox.voxelsniper.sniper.Sniper;
 import com.thevoxelbox.voxelsniper.sniper.snipe.Snipe;
 import com.thevoxelbox.voxelsniper.sniper.snipe.message.SnipeMessenger;
